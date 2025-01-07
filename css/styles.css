@@ -1,3 +1,168 @@
-body {
-    color: green;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
 }
+
+body {
+	background-image: url(./images/fantasy-forest.jpg);
+	background-position: center;
+	background-size: cover;
+	backdrop-filter: blur(5px);
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+}
+
+:root {
+	--table-name-color: #f0f0f0;
+	--table-header-color: #e3e0cc;
+	--table-row-color: #c5d5c5;
+}
+
+nav {
+	background-color: var(--table-header-color);
+	/*position: sticky;
+	top: 0;
+	z-index: 999;*/
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+  /*margin: 0.5rem;*/
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+	background-color: var(--table-name-color);
+}
+
+table {
+	border-spacing: 0;
+	width: 100%;
+}
+
+div.info {
+	width: 70vw;
+	height: 90vh;
+	border-radius: 0.8rem;
+	background-color: #fff5;
+	overflow: hidden;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+div.northern-countries {
+	width: 70vw;
+	height: 90vh;
+	border-radius: 0.8rem;
+	background-color: #fff5;
+	overflow: auto;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+
+th, td {
+	padding: 1.2rem;
+    text-align: center;
+	border-collapse: collapse; 
+}
+
+thead th {
+	position: sticky;
+	top: 0;
+	/*left: 0;*/
+	background-color: var(--table-header-color);
+}
+
+tbody tr:nth-child(even) {
+	background-color: #9fa9a3;
+}
+
+tbody tr:hover {
+	background-color: #deeaee;
+}
+
+section.countries {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	overflow: auto;
+}
+
+section.country-header {
+	position: sticky;
+	top: 0;
+}
+
+.location {
+	max-height: 200px;
+	border-radius: 50%;
+	margin: 2.5rem;
+	transition: max-height 700ms linear 400ms;
+}
+
+.table-header {
+	width: 100%;
+	background-color: var(--table-name-color);
+	padding: 0.8rem 1rem;
+}
+
+.table-body {
+	width: 95%;
+	max-height: calc(89% - 1.6rem);
+	background-color: var(--table-row-color);
+	margin: 0.8rem auto;
+	border-radius: 0.6rem;
+	overflow: auto;
+}
+
+.location:hover {
+	max-height: 220px;
+}
+
+.table-body::-webkit-scrollbar, div.northern-countries::-webkit-scrollbar{
+	width: 0.5rem;
+	height: 0.5rem;
+}
+
+.table-body::-webkit-scrollbar-thumb,div.northern-countries::-webkit-scrollbar-thumb{ 
+    border-radius: 0.5rem;
+	background-color: #0004;
+	visibility: hidden;
+}
+
+.table-body:hover::-webkit-scrollbar-thumb, div.northern-countries:hover::-webkit-scrollbar-thumb {
+	visibility: visible;
+}
+
+tr.general-info td:last-of-type {
+	font-weight: bold;
+}
+
+/*@media (max-width: 100px) {
+	td:not(:first-of-type) {
+		min-width: 12.1rem;
+	}
+}*/
