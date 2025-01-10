@@ -1,168 +1,154 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: sans-serif;
+	margin: 5px;
 }
 
-body {
-	background-image: url(./images/fantasy-forest.jpg);
-	background-position: center;
-	background-size: cover;
-	backdrop-filter: blur(5px);
-}
-
-main {
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-
+html {
+	font-size: 18px;
 }
 
 :root {
-	--table-name-color: #f0f0f0;
-	--table-header-color: #e3e0cc;
-	--table-row-color: #c5d5c5;
+	--kenobi-jedi-blue: lightblue;
 }
 
-nav {
-	background-color: var(--table-header-color);
-	/*position: sticky;
+body {
+  background-color: grey;
+  background-image: url(images/stars.jfif);
+  background-position: center;
+  background-size: cover;
+}
+
+#nav-bar {
+	margin: 0 0 25px 0;
+	background-color: #333;
+	position: sticky;
 	top: 0;
-	z-index: 999;*/
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li  {
+    float: right;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  li:last-child {
+  border-right: none;
 }
-
-li {
-  float: left;
-  /*margin: 0.5rem;*/
-}
-
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-	background-color: var(--table-name-color);
-}
-
-table {
-	border-spacing: 0;
-	width: 100%;
-}
-
-div.info {
-	width: 70vw;
-	height: 90vh;
-	border-radius: 0.8rem;
-	background-color: #fff5;
-	overflow: hidden;
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-}
-
-div.northern-countries {
-	width: 70vw;
-	height: 90vh;
-	border-radius: 0.8rem;
-	background-color: #fff5;
-	overflow: auto;
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-}
-
-
-th, td {
-	padding: 1.2rem;
+  
+  li  a {
+    display: block;
+    color: var(--main-text-color);
     text-align: center;
-	border-collapse: collapse; 
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+  
+  li  a:hover {
+    background-color: lightblue;
+    color: darkslategrey;
+  }
+
+header {
+  display: block;
+  margin: 0 auto;
+  width: min(80vw, 700px);
+  padding: 25px;
+  text-align: center;
+  box-shadow: 10px 10px 3em var(--kenobi-jedi-blue);
+  
 }
 
-thead th {
-	position: sticky;
-	top: 0;
-	/*left: 0;*/
-	background-color: var(--table-header-color);
+figcaption {
+	color: white;
 }
 
-tbody tr:nth-child(even) {
-	background-color: #9fa9a3;
+h1, h2, p, figcaption {
+	text-align: center;
 }
 
-tbody tr:hover {
-	background-color: #deeaee;
+header, .glazing, .cards, .gallery {
+  background-color: #333;
+  color: #fff;
+  border-radius: 40px;
 }
 
-section.countries {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	overflow: auto;
+.glazing {
+  display: block;
+  max-width: 500px;
+  min-width: 240px;
+  padding: 25px;
+  margin: 20px auto 40px;
+  text-align: center;
+  box-shadow: 10px 10px 3em var(--kenobi-jedi-blue);
 }
 
-section.country-header {
-	position: sticky;
-	top: 0;
+.container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.location {
-	max-height: 200px;
-	border-radius: 50%;
-	margin: 2.5rem;
-	transition: max-height 700ms linear 400ms;
+.cards {
+  padding: 48px;
+  margin-bottom: 80px;
+  text-align: center;
+  box-shadow: 10px 10px 3em var(--kenobi-jedi-blue);
+  flex-basis: 30%;
+  min-width: 240px;
 }
 
-.table-header {
-	width: 100%;
-	background-color: var(--table-name-color);
-	padding: 0.8rem 1rem;
+.gallery {
+  margin: 40px;
+  padding: 30px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-shadow: 10px 10px 3em grey;
+  flex-basis: 30%;
+  min-width: 240px;
+  box-shadow: 10px 10px 3em var(--kenobi-jedi-blue);
 }
 
-.table-body {
-	width: 95%;
-	max-height: calc(89% - 1.6rem);
-	background-color: var(--table-row-color);
-	margin: 0.8rem auto;
-	border-radius: 0.6rem;
-	overflow: auto;
+.obi-wan {
+  max-height: 200px;
+  padding: 5px;
 }
 
-.location:hover {
-	max-height: 220px;
+#title {
+	color: white;
 }
 
-.table-body::-webkit-scrollbar, div.northern-countries::-webkit-scrollbar{
-	width: 0.5rem;
-	height: 0.5rem;
+#image {
+  display: block;
+  margin: 30px auto 0;
+  max-width: 100%;
+  min-width: 350px;
+  height: auto;
+  border-radius: 40px;
 }
 
-.table-body::-webkit-scrollbar-thumb,div.northern-countries::-webkit-scrollbar-thumb{ 
-    border-radius: 0.5rem;
-	background-color: #0004;
-	visibility: hidden;
+a:link {
+	color: green;
+}
+a:hover {
+	color: white;
+}
+a:visited {
+	color: lightblue;
 }
 
-.table-body:hover::-webkit-scrollbar-thumb, div.northern-countries:hover::-webkit-scrollbar-thumb {
-	visibility: visible;
-}
 
-tr.general-info td:last-of-type {
-	font-weight: bold;
-}
-
-/*@media (max-width: 100px) {
-	td:not(:first-of-type) {
-		min-width: 12.1rem;
+@media only screen and (max-width: 500px) {
+	.obi-wan {
+		max-height: 150px;
 	}
-}*/
+}
