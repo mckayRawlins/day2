@@ -1,16 +1,54 @@
-*  {
-    font-family: Andale Mono, monospace;
-    box-sizing: border-box;}
-h1 {
-        text-align: center !important; 
-        color: rgba(255, 255, 255, 0.751);
-        opacity: 100% !important;
-        font-size: 65px;
-    }    
+* {
+	margin: 5px;
+}
+
+html {
+	font-size: 18px;
+}
+
+:root {
+	--kenobi-jedi-blue: lightblue;
+}
+
 body {
-   
-    background-color:  #9fa9a3;
+  background-color: grey;
+  
 }
-p {
-    text-align: center !important; 
+
+#nav-bar {
+	margin: 0 0 25px 0;
+	background-color: #333;
+	position: sticky;
+	top: 0;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li  {
+    float: right;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  li:last-child {
+  border-right: none;
+}
+  
+  li  a {
+    display: block;
+    color: var(--main-text-color);
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+  }
+  
+  li  a:hover {
+    background-color: lightblue;
+    color: darkslategrey;
+  }

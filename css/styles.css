@@ -12,9 +12,7 @@ html {
 
 body {
   background-color: grey;
-  background-image: url(images/stars.jfif);
-  background-position: center;
-  background-size: cover;
+  
 }
 
 #nav-bar {
