@@ -1,5 +1,5 @@
 * {
-	margin: 5px;
+	margin: 0;
 }
 
 html {
@@ -128,7 +128,7 @@ header, .glazing, .cards, .gallery {
 #image {
   display: block;
   margin: 30px auto 0;
-  max-width: 100%;
+  max-width: 95%;
   min-width: 350px;
   height: auto;
   border-radius: 40px;
